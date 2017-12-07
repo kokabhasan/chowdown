@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Chow Down </title>
+<link rel="stylesheet" href="restaurant.css" />
+
+</head>
+
+<body>
+	
+
+  <header> 
+    <h1>Chow Down </h1> </header>
+  
+  <nav><b><a href="index.html">Home</a>&nbsp;
+  <a href="menu.html">Menu</a>&nbsp;
+  <a href="contact.html">Contact</a>&nbsp;
+   <a href="JavaScript:newPopup('special.html');">Specials</a>
+   <a href="application.html">Employment Application Form</a>&nbsp;
+	</b>
+   </nav> 
+   
+   <body onload = "startTimer()">
+       <img id="img" src="startpicture.jpg"/>
+       <button type="button" onclick="displayPreviousImage()">Previous</button>
+       <button type="button" onclick="displayNextImage()">Next</button>
+   </body>
+   
+   
+   <script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+
+function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 2000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "logo.jpg";
+          images[1] = "samosa.jpg";
+          images[2] = "puri.jpg";
+ 
+
+</script>
+  <main> 
+   <p>Food is not just to calm down hunger, but also to calm down the taste buds.
+   Chow Down is an American-Indian resturant, serving since 2013. 
+   We offer the most authentic and personalised dishes that you will absolutely love.
+   We specialize in bakery and Indian cuisine.</p>
+   <img src="logo.jpg" width="250" height="355"  alt="logo">
+   <p>Dine-in and carry away services are provided. </p>
+   </main> 
+   <footer>
+      <i><small>Copyright &copy; 2017 Chow Down<br>
+</footer>
+  </div> 
+  
+  
+  
+</body>
+</html>
+
+

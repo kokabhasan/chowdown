@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chow Down</title>
+<link rel="stylesheet" href="restaurant.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="resturant.css" />
+</head>		
+   
+<body>
+<div id="wrapper">
+  <header>
+    <h2>Chow Down</h2>
+	
+  </header> 
+  <nav><b><a href="index.html">Home</a>&nbsp;
+  <a href="menu.html">Menu</a>&nbsp;
+  <a href="contact.html">Contact</a>&nbsp;
+  <a href="JavaScript:newPopup('special.html');">Specials</a>
+  <a href="application.html">Employment Application Form</a>&nbsp;
+	</b>
+   </nav> 
+
+
+<script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+</script>
+<script>
+var dish1="Stuffed Garlic Bread"; 
+var dish2="Pizza with a twist";
+var dish3="Chicken braided bread";
+var dish4="Eclares";
+var dish5="Samosa";
+var dish6="Tri-colored Puri";
+</script>
+
+ <script> 
+//global variable
+
+var price = ["8.50", "14.00", "14.50", "5.00", "3.00","2.00"]; //array of places
+
+function processPrice(){
+for( var i =0; i <6; i++)
+	{var listItem = "item" + (i + 1);
+	document.getElementById(listItem).innerHTML = price[i];}
+}
+ if (window.addEventListener) {
+   		window.addEventListener("load", processPrice, false);
+   	  } else if (window.attachEvent) {
+   		window.attachEvent("onload", processPrice);}
+
+
+function calculate(){
+
+var i_qty = document.getElementById("item1Qty").value;
+var i_price = price[0];
+var total1 = i_qty * i_price;
+//alert(total1);
+
+var i_qty1 = document.getElementById("item2Qty").value;
+var i_price1 = price[1];
+var total2 = total1 + i_qty1 * i_price1;
+//alert(total2);
+var i_qty2 = document.getElementById("item3Qty").value;
+var i_price2 = price[2];
+var total3 = total2 + i_qty2 * i_price2;
+//alert(total3);
+
+var i_qty3 = document.getElementById("item4Qty").value;
+var i_price3 = price[3];
+var total4 = total3 + i_qty3 * i_price3;
+//alert(total4);
+
+var i_qty4 = document.getElementById("item5Qty").value;
+var i_price4 = price[4];
+var total5 = total4 + i_qty4 * i_price4;
+//alert(total5);
+
+var i_qty5 = document.getElementById("item6Qty").value;
+var i_price5 = price[5];
+var total6 = total5 + i_qty5 * i_price5;
+alert("Total is $" + total6.toFixed(2));
+
+}		
+   </script>
+ <table border="1"> 
+ <caption>Chow Down Bistro Menu</caption>
+ <form>
+   <tr>
+     <th>Dishes</th>
+	 <th>Images</th>
+     <th>Price</th>
+	 <th>Quantity</th>
+  </tr>
+  <tr>
+     <td>   <script> document.write(dish1); </script>   </td>
+    <td> <img src="garlic.jpg" width="250" height="355"  alt="Garlic bread"></td>
+	 <td id="item1"></td>
+	 <td> <select id="item1Qty"> <option>0</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></td>
+  </tr>
+  <tr>
+     <td><script> document.write(dish2); </script>   </td>
+     <td><img src="pizza.jpg" width="350" height="255"  alt="Pizza with a twist"></td>
+	 <td id="item2"></td>
+	 <td> <select id="item2Qty"> <option>0</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></td>
+   </tr>
+    <tr>
+     <td><script> document.write(dish3); </script>   </td>
+     <td><img src="bread.jpg" width="350" height="255"  alt="Braded bread"></td>
+	 <td id="item3"></td>	 
+	 <td> <select id="item3Qty"> <option>0</option><option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></td>
+  </tr>
+   <tr>
+     <td><script> document.write(dish4); </script> </td>
+     <td><img src="eclare.jpg" width="350" height="255"  alt="Eclare"></td>
+	<td id="item4"></td>
+	 <td> <select id="item4Qty"> <option>0</option><option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></td>
+	  <tr>
+     <td><script> document.write(dish5); </script> </td>
+    <td><img src="samosa.jpg" width="350" height="255"  alt="Samosa"></td>
+	 <td id="item5"></td>
+	 <td> <select id="item5Qty"><option>0</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></td>
+	 <tr>
+     <td><script> document.write(dish6); </script> </td>
+     <td><img src="puri.jpg" width="350" height="255"  alt="Tri-colored puri"></td>
+	 <td id="item6"></td>
+	 <td> <select id="item6Qty"> <option>0</option><option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select>
+     </td>
+	 <tr>
+     <td></td> <td></td> <td></td> <td>
+	    <button onclick="calculate()">Place Order</button></td>
+   
+	</form>
+
+	 
+	 
+</table>
+<footer>
+      <i><small>Copyright &copy; 2017 Chow Down<br>
+</footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chow Down</title>
+<link rel="stylesheet" href="restaurant.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="resturant.css" />
+</head>		
+   
+<body>
+<div id="wrapper">
+  <header>
+    <h2>Chow Down</h2>
+  </header> 
+
+
+<script>
+var d1="Veg Pizza"; 
+var d2="Gyro";
+var d3="Sandwich";
+
+</script>
+
+ <script> 
+//global variable
+//image source google
+var price = ["10.50", "4.00", "2.50"]; //array of places
+
+function processPrice(){
+for( var i =0; i <3; i++)
+	{var listItem = "item" + (i + 1);
+	document.getElementById(listItem).innerHTML = price[i];}
+}
+ if (window.addEventListener) {
+   		window.addEventListener("load", processPrice, false);
+   	  } else if (window.attachEvent) {
+   		window.attachEvent("onload", processPrice);}
+
+   </script>
+   <a href="JavaScript:window.close()">Close</a>
+ <table border="1"> 
+ <caption>Chow Down Bistro Specials Menu</caption>
+   <tr>
+     <th>Dishes</th>
+	 <th>Images</th>
+     <th>Price</th>
+  </tr>
+  
+  <tr>
+     <td>   <script> document.write(d1); </script>   </td>
+    <td> <img src="pizza2.jpg" width="250" height="355"  alt="Veg Pizza"></td>
+	 <td id="item1"></td>
+  </tr>
+  <tr>
+     <td><script> document.write(d2); </script>   </td>
+     <td><img src="gyro.jpg" width="350" height="255"  alt="Gyro"></td>
+	 <td id="item2"></td>
+   </tr>
+    <tr>
+     <td><script> document.write(d3); </script>   </td>
+     <td><img src="sandwich.jpg" width="350" height="255"  alt="Sandwich"></td>
+	 <td id="item3"></td>
+  </tr>
+  
+	 
+	 
+</table>
+<footer>
+      <i><small>Copyright &copy; 2017 Chow Down<br>
+</footer>
+</body>
+</html>
